@@ -1,0 +1,179 @@
+:root{
+    --mainModalColour : rgb(255, 62, 159);
+}
+
+body{
+    margin:0px;
+    width:0px;
+    height:0px;
+    background-color: black;
+}
+
+#mainSection{
+    position:relative;
+    top:10vh;
+    left:10vw;
+    height:80vh;
+    width:80vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#chooseAvatar{
+    height: 100%;
+    width:50%;
+    text-align: center;
+}
+
+#chooseAvatar h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+}
+
+#characterGrids{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.charContainer{
+    padding:10px;
+    width:100px;
+    height:100px;
+    border: black solid 5px;
+    border: 10px ridge white;
+    color:white;
+}
+
+.charContainer:hover{
+    cursor:pointer;
+}
+
+.charContainer img{
+    width:100%;
+    height:100%
+}
+
+.charContainer h3{
+    width:100%;
+    height:100%
+}
+
+#displayChar{
+    width:60%;
+    height:100%;
+    border: 10px ridge white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left:0px;
+    right:0px;
+}
+
+#displayName{
+    color: white;
+    height:5%;
+    width:100%;
+    text-align: center;
+}
+
+#displayPokemon{
+    width:100%;
+    height:95%;
+}
+
+#canvas{
+    /*border: 1px solid var(--mainModalColour) ;*/
+    width: 650px;
+    height:650px;
+    z-index:5;
+    position: absolute;
+    top:10%;
+    right:5%;
+}
+
+
+.btn{
+    cursor: pointer;
+    height:50px;
+    width:50px;
+    text-decoration: none;
+    border: 3px outset white;
+    border-radius: 10px;
+    outline: none;
+    color: var(--mainModalColour);
+    background-color: black;
+    transition : border 0.2s ease-in;
+}
+
+.btn:hover{
+    border: 3px  var(--mainModalColour) inset;
+
+}
+
+.btnImage{
+    height: 100%;
+    width:100%;
+    height:50px;
+    width:50px;
+}
+
+#prePageBtn{
+    position: relative;
+}
+
+
+#confirmationBox{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-out;
+    z-index: 5;
+    display: none;
+}
+
+#confirmContent{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:var(--mainModalColour);
+    border-style: inset;
+    border-color: white;
+    border-radius: 10px;
+    width:300px;
+    height:150px; 
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    z-index: 6;
+}
+
+#modalTitle{
+    position:relative;
+    left:5%;
+}
+
+#btnSection{
+    position: relative;
+    top:40%;
+    width:100px;
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+

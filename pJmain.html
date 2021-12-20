@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link href="pJmain.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header>
+
+        <h1 id="pokemonTitle">
+
+            <canvas id="canvas" height = "150" width = "800"></canvas> 
+        
+        </h1>
+
+    </header>
+
+    <div id="mainSection">
+
+        <a id = "playGame" class="btn" data-audio="Options" href="gameStart/gameStartPage.html" >
+            <p>PLAY</p>
+        </a >
+
+        <a id = "chooseChar" class="btn" data-audio="Options" href="chooseChar/chooseChar.html" >
+            <p>Choose Character</p>
+        </a >
+
+        <button class="btn" data-audio="Options" id="Options" >
+            Sound Options: <span id ="soundBtn">On</span>
+        </button>
+
+    </div>
+
+    <script src="gameSound.js"></script>
+    <script src="pjMain.js"></script>
+</body>
+</html>

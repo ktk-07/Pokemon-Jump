@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplay</title>
+    <link href="gameStart.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <section id="gameSection">
+        <img id="characterBox" src= "../characterSprites/Mega Charizard X.png"/>
+        <img id="collisionImg" src="../characterSprites/collisionImg.png" alt="collision" />
+        <canvas id="canvasElement" width="1000" height="400">
+        </canvas>
+    </section>
+    
+    <div id= "modal">
+        <div class = "modalContent">
+            <div class="modalHeader">
+
+                <div id="modalTitle" >
+                    <h1 id="titleDescription">Game Over!</h1>
+                </div>
+
+                <button id="closeModalBtn" class="btn">
+                </button>
+
+
+            </div>
+
+            <div class = "modalOptions">
+
+                <a id="mainMenuBtn" class="btn" href="../pJmain.html">
+                    <p>Main Menu</p>
+                </a>
+
+                <button id="restartBtn" class="btn">
+                    Restart
+                </button>
+
+                <!-- <button id = "changeCharBtn" class="btn">
+                    Change Avatar
+                </button> -->
+
+                <a id="changeCharBtn" class="btn" href="../chooseChar/chooseChar.html">
+                    <p>Change Avatar</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 
+
+        charizard  src= "../characterSprites/MegaXCharizard copy.png" 
+        greninja   src= "../characterSprites/Greninja copy.png"
+        hydregion src= "../characterSprites/Hydreigon copy.png"
+        // my xerneas does not work gotta try another sprite sheet;
+        trainderRed src= "../characterSprites/TrainerRed copy.png"
+    -->
+
+    <!--The order of the scripts this is important -->
+    <script src="inGameSounds.js"></script>
+    <script src="pokemonChar.js"></script>
+    <script src="treesAndBirds.js"></script>
+    <script src="gameStartMain.js"></script>
+    <script src="gameEnd.js" ></script>
+</body>
+</html>
+

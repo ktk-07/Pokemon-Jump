@@ -1,0 +1,182 @@
+:root{
+    --mainModalColour : rgb(228, 21, 124);
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+#gameSection{
+    width:50vw;
+    height:600px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+#characterBox{
+    display: none;
+    /* height:64px;
+    width:calc(254px/4); */
+    /* background-image: url(../characterSprites/MegaXCharizard\ copy.png); */
+    /*animation: pokemonMove steps(4)  0.25s  infinite both;*/
+}
+
+#canvasElement{
+    height:400px;
+    width:1000px;
+    border:black 1px solid;
+}
+
+#collisionImg{
+    display:none;
+}
+
+#modal{
+    
+    display:none;
+    height: 100vh;
+    width : 100vw;
+    background-color: rgba(0,0,0);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.modalContent{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:500px;
+    width: 500px;
+    background-color: white;
+    opacity:1;
+    z-index: 3;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: 5px var(--mainModalColour) solid;
+}
+
+.modalHeader{
+    height:15%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modalTitle{
+    position: relative;
+    left:10%;
+    height:100%;
+    width:80%;
+}
+
+#titleDescription{
+    position: relative;
+    text-align: center;
+}
+
+#closeModalBtn::after{
+    position:absolute;
+    content:" ";
+    top:0;
+    right:20%;
+    background-color: black;
+    width:5px;
+    height:20px;
+    transform: rotate(45deg);
+}
+
+#closeModalBtn::before{
+    position:absolute;
+    top:0;
+    right:20%;
+    content:" ";
+    background-color: black;
+    width:5px;
+    height:20px;
+    transform: rotate(-45deg);
+}
+
+#closeModalBtn{
+    position:relative;
+    top:-35%;
+    right:1%;
+    height:20px;
+    width:20px;
+    outline:none;
+    border:none;
+    background-color: white;
+    text-decoration: none;
+    z-index:5
+}
+
+#closeModalBtn:hover::after{
+    background-color: var(--mainModalColour);
+
+}
+
+#closeModalBtn:hover::before{
+    background-color: var(--mainModalColour);
+}
+
+.modalOptions{
+    height:85%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.btn{
+    height:50px;
+    width:200px;
+    outline:none;
+    border:none;
+    background-color: black;
+    text-decoration: none; 
+    color:white; 
+    font-family: serif;
+    font-size: 24px;
+}
+
+.btn:hover{
+    color: var(--mainModalColour);
+}
+
+#mainMenuBtn{
+    position: relative;
+}
+
+#mainMenuBtn p{
+    position: relative;
+    top:-25%;
+    left:23%;
+}
+
+#changeCharBtn p{
+    position: relative;
+    top:-25%;
+    left:15%;
+}
+
+/* @keyframes pokemonMove{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 254;
+    }
+} */

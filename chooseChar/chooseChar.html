@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chooseCharacters</title>
+    <link type="text/css" rel="stylesheet" href="chooseChar.css" />
+</head>
+<body>
+    <!-- 
+        When i hover over the characters only the four corners of the board is shown, 
+        Click on th avatar to choose the pokemon
+    -->
+
+    <!-- <audio src="../gameAudio Files/clickOptions.wav" controls> -->
+    <!-- </audio> -->
+
+    <div id="mainSection">
+        <div id = "chooseAvatar">
+            <h1>Choose Character</h1>
+            <div id="characterGrids" class="gridBox">
+
+                <div class= "charContainer"  > 
+                    <img class="charTag audioBtn" data-info="Mega Charizard X" data-audio="Options"  src="../Pokemon Avatar/MegaCharizardXAvatar.png" />
+                </div>
+    
+                <div class= "charContainer" > 
+                    <img class="charTag audioBtn" data-info="Greninja" data-audio="Options" src="../Pokemon Avatar/greninjaAvatar.png" />
+                </div>
+    
+                <div class= "charContainer" > 
+                    <img class="charTag audioBtn" data-info="Xerneas" data-audio="Options"  src="../Pokemon Avatar/XerneasAvatar.png" />
+                </div>
+    
+                <div class="charContainer" >
+                    <img class="charTag audioBtn" data-info="randomiseChar" data-audio="Options" src="../Pokemon Avatar/questionMark.png" />
+                </div>
+    
+                <div class= "charContainer" > 
+                    <img class="charTag audioBtn" data-info="Hydreigon" data-audio="Options" src="../Pokemon Avatar/HydreigonAvatar.png" />
+                </div>
+    
+                <div class= "charContainer" > 
+                    <img class="charTag audioBtn" data-info="Trainer Red" data-audio="Options" src="../Pokemon Avatar/TrainerRedAvatar.png" />
+                </div>
+
+                <div class= "charContainer" > 
+                    <h3 data-info="randomiseChar" class="charTag audioBtn" data-audio="Options" >More Characters to Come ... </h3>
+                </div>
+
+    
+    
+            </div>
+
+            <div id="btnSection" class="btnBox">
+        
+                <!-- My anchor tag and button still to ugly god damn idk why -->
+                <button id="prePageBtn" class="btn" data-audio="Options" class="audioBtn"    >
+                    <!-- Usage of the history api, the history object on the window object -->
+                    Back
+                </button>
+            
+                <a id="playBtn" href="../gameStart/gameStartPage.html" data-audio="Options" class="audioBtn"   >
+                    <img src="../btns/play-button.png" class="btnImage" />
+                </a>
+        
+            </div>
+
+        </div>
+
+        <div id="displayChar">
+            <!-- <img id="pic" src="../charDisplayPic/MegaCharizardX.png" height="750" width="650" > -->
+            <div id="displayPokemon" >
+                <canvas id = "canvas">
+                    
+                </canvas>
+            </div>
+
+            <p id="displayName">
+                Character
+            </p>
+
+            
+        </div>
+
+        <div id="confirmationBox" class="overlay">
+
+            <div id="confirmContent" >
+                <div id="confirmationHeader">
+                    <h3 id="modalTitle">
+                        <span id="pokemon"> Greninja</span>
+                        <span>is the character you are playing with?</span>
+                    </h3>
+                </div>
+
+                <div id="confirmationBtn">
+                    <button id="yesBtn" data-audio="Options" class = "btn audioBtn">
+                        Yes
+                    </button>
+
+                    <!-- <a id="yesBtn" class="btn" href="../gameStart/gameStartPage.html" >
+                        Yes
+                    </a> -->
+
+                    <button id="noBtn" data-audio="Options" class= "btn audioBtn">
+                        No
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="drawChar.js" ></script>
+    <script src="chooseChar.js" ></script>
+</body>
+</html>
